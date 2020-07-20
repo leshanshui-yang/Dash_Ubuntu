@@ -9,11 +9,11 @@ t = 20
 x = numpy.linspace(0, 2 * numpy.pi, 100)
 y = 10 * 2 * numpy.cos(t)
 
-app = dash.Dash(__name__, requests_pathname_prefix="/heads/")
-app.scripts.config.serve_locally = True # Debug use
-app.css.config.serve_locally = True # Debug use
-app.config.suppress_callback_exceptions = True # Debug use
-app.routes_pathname_prefix = app.url_base_pathname #(already had app.url_base_pathname = "/heads/") # Debug use
+app = dash.Dash(__name__)
+#app.scripts.config.serve_locally = True # Debug use
+#app.css.config.serve_locally = True # Debug use
+#app.config.suppress_callback_exceptions = True # Debug use
+#app.routes_pathname_prefix = app.url_base_pathname #(already had app.url_base_pathname = "/heads/") # Debug use
 
 app.layout = dash_html_components.Div(children=[
     dash_html_components.H1(children='Testme'),
